@@ -1,19 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\MobilBaherindo;
 
-use App\Models\MotorBaherindo;
 use Illuminate\Http\Request;
 
-class WelcomeController extends Controller
+class CreateController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $motor = MotorBaherindo::all();
-        return view('welcome', compact('motor'));
+
+        $mobil = MobilBaherindo::all();
+        return view('mobil', compact('mobil'));
+        
     }
 
     /**
